@@ -11,6 +11,6 @@ USER seqware
 WORKDIR /home/seqware
 RUN git clone https://github.com/ICGC-TCGA-PanCancer/pancancer-bag.git 
 WORKDIR /home/seqware/pancancer-bag 
-RUN git checkout 1.0-beta.2
+RUN git checkout 1.0-beta.3
 RUN ansible-playbook pancancer-dependencies.yml -c local --extra-vars "user_name=seqware"
 RUN sudo apt-get update && sudo apt-get install -y curl
