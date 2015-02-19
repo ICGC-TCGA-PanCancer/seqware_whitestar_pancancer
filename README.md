@@ -1,32 +1,11 @@
-This layers all pancancer dependencies (aside from the workflows themselves, which are fairly big)  on top of a base SeqWare docker image
-
-There are two ways of getting the image:
-* as a developer, you can build the image using the docker file
-* as a user, download the image from Docker Hub
-
-Note that this image is an automated build on Docker Hub. 
-
-
-### Building the image
-
-1. Assuming docker is installed properly, build image with 
- 
-        docker build  -t seqware/seqware_whitestar_pancancer .
-
-### Downloading and restoring the image
-
-1. Rather than building the image, you can also download and restore it from DockerHub 
-
-        docker pull seqware/seqware_whitestar_pancancer
-
-## Running the Container
-
+## Users - running the container
 
 1. Set permissions on datastore which will hold results of workflows after they run
 
          chmod a+w datastore
 
-2. Run the tabix server as a named container if you have not already (see the tabix container) 
+2. Run the tabix server as a named container if you have not already (see the [tabix](../tabix)) 
+
 
 3. Download and expand your workflows using the SeqWare unzip tool. Here we use Sanger as an example (you should probably pick a shared directory outside of this directory to avoid interfering with the Docker context if you need to rebuild the image). 
 
@@ -55,3 +34,8 @@ Note that this image is an automated build on Docker Hub.
          seqware bundle launch --dir /workflow --no-metadata --ini workflow.ini --engine whitestar-parallel
 
 7. For running real workflows, you will be provided with a gnos pem key that should be installed to the scripts directory of the Sanger workflow.
+
+## Developers - building the image locally  
+
+1. Assuming docker is installed properly, build image with 
+ 
