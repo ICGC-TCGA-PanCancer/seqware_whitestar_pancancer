@@ -1,8 +1,9 @@
 ## Users - running the container
 
 1. Set permissions on datastore which will hold results of workflows after they run
-
-         chmod a+w datastore
+        
+        mkdir workflows && mkdir datastore
+        chmod a+wrx workflows && chmod a+wrx datastore
 
 2. Run the tabix server as a named container if you have not already (see the [tabix](../tabix)) 
 
