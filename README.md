@@ -8,7 +8,7 @@
 2. Run the tabix server as a named container if you have not already (see the [tabix](../tabix)) 
 
 
-3. Download and expand your workflows using the SeqWare unzip tool. Here we use Sanger as an example (you should probably pick a shared directory outside of this directory to avoid interfering with the Docker context if you need to rebuild the image). 
+3. Download and expand your workflows using the SeqWare unzip tool, it requires Java 7. Here we use Sanger as an example (you should probably pick a shared directory outside of this directory to avoid interfering with the Docker context if you need to rebuild the image). 
 
          cd workflows
          wget https://seqwaremaven.oicr.on.ca/artifactory/seqware-release/com/github/seqware/seqware-distribution/1.1.0-alpha.6/seqware-distribution-1.1.0-alpha.6-full.jar
