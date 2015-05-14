@@ -2,7 +2,7 @@
 # Volume mount \datastore to persist the contents of your workflows
 # ex:  sudo docker run -d -P --name web -v datastore:/datastore \bin\bash 
 
-FROM seqware/seqware_whitestar
+FROM seqware/seqware_whitestar:1.1.1
 MAINTAINER Denis Yuen <denis.yuen@oicr.on.ca>
 
 # at this point, assume seqware has been fully setup
