@@ -5,7 +5,7 @@
         mkdir workflows && mkdir datastore
         chmod a+wrx workflows && chmod a+wrx datastore
 
-2. Run the tabix server as a named container if you have not already (see the [tabix](../tabix)) 
+2. Run the tabix server as a named container if you have not already (see the [tabix](https://github.com/ICGC-TCGA-PanCancer/pancancer_tabix_server)) 
 
 
 3. Download and expand your workflows using the SeqWare unzip tool, it requires Java 7. Here we use Sanger as an example (you should probably pick a shared directory outside of this directory to avoid interfering with the Docker context if you need to rebuild the image). 
